@@ -1,0 +1,357 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Action Controller: Exception caught</title>
+  <style>
+    body { background-color: #fff; color: #333; }
+
+    body, p, ol, ul, td {
+      font-family: verdana, arial, helvetica, sans-serif;
+      font-size:   13px;
+      line-height: 18px;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      font-size: 11px;
+    }
+
+    a { color: #000; }
+    a:visited { color: #666; }
+    a:hover { color: #fff; background-color:#000; }
+  </style>
+</head>
+<body>
+
+<h1>
+  NoMethodError in
+  Users#new
+</h1>
+
+<p>
+  Showing <i>/home/jorge/rails_projects/sample_app/app/views/users/new.html.erb</i> where line <b>#2</b> raised:
+  <pre><code>undefined method `model_name' for NilClass:Class</code></pre>
+</p>
+
+<p>Extracted source (around line <b>#2</b>):
+<pre><code>1: &lt;h1&gt;Sign up&lt;/h1&gt;
+2: &lt;%= form_for @user do |f| %&gt;
+3:   &lt;div class=&quot;field&quot;&gt;
+4:     &lt;%= f.label :name %&gt;&lt;br /&gt;
+5:     &lt;%= f.text_field :name %&gt;
+</code></pre></p>
+
+<p></p>
+
+
+<p><code>Rails.root: /home/jorge/rails_projects/sample_app</code></p>
+
+<div id="traces">
+    <a href="#" onclick="document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Application-Trace').style.display='block';; return false;">Application Trace</a> |
+    <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='block';; return false;">Framework Trace</a> |
+    <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='block';; return false;">Full Trace</a> 
+
+    <div id="Application-Trace" style="display: block;">
+      <pre><code>app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__330852824_96673140__681982147'</code></pre>
+    </div>
+    <div id="Framework-Trace" style="display: none;">
+      <pre><code>activemodel (3.0.1) lib/active_model/naming.rb:90:in `model_name_from_record_or_class'
+activemodel (3.0.1) lib/active_model/naming.rb:77:in `singular'
+actionpack (3.0.1) lib/action_view/helpers/form_helper.rb:306:in `form_for'
+actionpack (3.0.1) lib/action_view/template.rb:135:in `block in render'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `block in instrument'
+activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+actionpack (3.0.1) lib/action_view/template.rb:127:in `render'
+actionpack (3.0.1) lib/action_view/render/rendering.rb:59:in `block in _render_template'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `block in instrument'
+activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+actionpack (3.0.1) lib/action_view/render/rendering.rb:56:in `_render_template'
+actionpack (3.0.1) lib/action_view/render/rendering.rb:26:in `render'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:114:in `_render_template'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:108:in `render_to_body'
+actionpack (3.0.1) lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+actionpack (3.0.1) lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:101:in `render_to_string'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:92:in `render'
+actionpack (3.0.1) lib/action_controller/metal/rendering.rb:17:in `render'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+activesupport (3.0.1) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/jorge/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+activesupport (3.0.1) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+activerecord (3.0.1) lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:39:in `render'
+actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+activesupport (3.0.1) lib/active_support/callbacks.rb:435:in `_run__578288374__process_action__585678329__callbacks'
+activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `block in instrument'
+activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+actionpack (3.0.1) lib/action_controller/metal.rb:173:in `block in action'
+actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `block in call'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `block in recognize'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+rack (1.2.3) lib/rack/methodoverride.rb:24:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `block in call'
+activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+rack (1.2.3) lib/rack/sendfile.rb:107:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+rack (1.2.3) lib/rack/runtime.rb:17:in `call'
+activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+rack (1.2.3) lib/rack/lock.rb:11:in `block in call'
+&lt;internal:prelude&gt;:10:in `synchronize'
+rack (1.2.3) lib/rack/lock.rb:11:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+railties (3.0.1) lib/rails/application.rb:168:in `call'
+rack-test (0.5.7) lib/rack/mock_session.rb:30:in `request'
+rack-test (0.5.7) lib/rack/test.rb:209:in `process_request'
+rack-test (0.5.7) lib/rack/test.rb:105:in `request'
+actionpack (3.0.1) lib/action_dispatch/testing/integration.rb:290:in `process'
+actionpack (3.0.1) lib/action_dispatch/testing/integration.rb:32:in `get'
+actionpack (3.0.1) lib/action_dispatch/testing/integration.rb:323:in `block (2 levels) in &lt;module:Runner&gt;'
+/home/jorge/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/forwardable.rb:182:in `get'
+/home/jorge/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/forwardable.rb:182:in `get'
+webrat (0.7.3) lib/webrat/core/session.rb:280:in `process_request'
+webrat (0.7.3) lib/webrat/core/session.rb:119:in `request_page'
+webrat (0.7.3) lib/webrat/core/elements/link.rb:20:in `click'
+webrat (0.7.3) lib/webrat/core/scope.rb:276:in `click_link'
+/home/jorge/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/forwardable.rb:182:in `click_link'
+webrat (0.7.3) lib/webrat/core/methods.rb:7:in `click_link'
+spec/requests/layout_links_spec.rb:40:in `block (2 levels) in &lt;top (required)&gt;'
+rspec-core (2.6.4) lib/rspec/core/example.rb:48:in `instance_eval'
+rspec-core (2.6.4) lib/rspec/core/example.rb:48:in `block in run'
+rspec-core (2.6.4) lib/rspec/core/example.rb:107:in `with_around_hooks'
+rspec-core (2.6.4) lib/rspec/core/example.rb:45:in `run'
+rspec-core (2.6.4) lib/rspec/core/example_group.rb:294:in `block in run_examples'
+rspec-core (2.6.4) lib/rspec/core/example_group.rb:290:in `map'
+rspec-core (2.6.4) lib/rspec/core/example_group.rb:290:in `run_examples'
+rspec-core (2.6.4) lib/rspec/core/example_group.rb:262:in `run'
+rspec-core (2.6.4) lib/rspec/core/command_line.rb:24:in `block (2 levels) in run'
+rspec-core (2.6.4) lib/rspec/core/command_line.rb:24:in `map'
+rspec-core (2.6.4) lib/rspec/core/command_line.rb:24:in `block in run'
+rspec-core (2.6.4) lib/rspec/core/reporter.rb:12:in `report'
+rspec-core (2.6.4) lib/rspec/core/command_line.rb:21:in `run'
+rspec-core (2.6.4) lib/rspec/core/runner.rb:80:in `run_in_process'
+rspec-core (2.6.4) lib/rspec/core/runner.rb:69:in `run'
+rspec-core (2.6.4) lib/rspec/core/runner.rb:11:in `block in autorun'</code></pre>
+    </div>
+    <div id="Full-Trace" style="display: none;">
+      <pre><code>activemodel (3.0.1) lib/active_model/naming.rb:90:in `model_name_from_record_or_class'
+activemodel (3.0.1) lib/active_model/naming.rb:77:in `singular'
+actionpack (3.0.1) lib/action_view/helpers/form_helper.rb:306:in `form_for'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__330852824_96673140__681982147'
+actionpack (3.0.1) lib/action_view/template.rb:135:in `block in render'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `block in instrument'
+activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+actionpack (3.0.1) lib/action_view/template.rb:127:in `render'
+actionpack (3.0.1) lib/action_view/render/rendering.rb:59:in `block in _render_template'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `block in instrument'
+activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+actionpack (3.0.1) lib/action_view/render/rendering.rb:56:in `_render_template'
+actionpack (3.0.1) lib/action_view/render/rendering.rb:26:in `render'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:114:in `_render_template'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:108:in `render_to_body'
+actionpack (3.0.1) lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+actionpack (3.0.1) lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:101:in `render_to_string'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:92:in `render'
+actionpack (3.0.1) lib/action_controller/metal/rendering.rb:17:in `render'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+activesupport (3.0.1) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/jorge/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+activesupport (3.0.1) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+activerecord (3.0.1) lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:39:in `render'
+actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+activesupport (3.0.1) lib/active_support/callbacks.rb:435:in `_run__578288374__process_action__585678329__callbacks'
+activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `block in instrument'
+activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+actionpack (3.0.1) lib/action_controller/metal.rb:173:in `block in action'
+actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `block in call'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `block in recognize'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+rack (1.2.3) lib/rack/methodoverride.rb:24:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `block in call'
+activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+rack (1.2.3) lib/rack/sendfile.rb:107:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+rack (1.2.3) lib/rack/runtime.rb:17:in `call'
+activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+rack (1.2.3) lib/rack/lock.rb:11:in `block in call'
+&lt;internal:prelude&gt;:10:in `synchronize'
+rack (1.2.3) lib/rack/lock.rb:11:in `call'
+actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+railties (3.0.1) lib/rails/application.rb:168:in `call'
+rack-test (0.5.7) lib/rack/mock_session.rb:30:in `request'
+rack-test (0.5.7) lib/rack/test.rb:209:in `process_request'
+rack-test (0.5.7) lib/rack/test.rb:105:in `request'
+actionpack (3.0.1) lib/action_dispatch/testing/integration.rb:290:in `process'
+actionpack (3.0.1) lib/action_dispatch/testing/integration.rb:32:in `get'
+actionpack (3.0.1) lib/action_dispatch/testing/integration.rb:323:in `block (2 levels) in &lt;module:Runner&gt;'
+/home/jorge/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/forwardable.rb:182:in `get'
+/home/jorge/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/forwardable.rb:182:in `get'
+webrat (0.7.3) lib/webrat/core/session.rb:280:in `process_request'
+webrat (0.7.3) lib/webrat/core/session.rb:119:in `request_page'
+webrat (0.7.3) lib/webrat/core/elements/link.rb:20:in `click'
+webrat (0.7.3) lib/webrat/core/scope.rb:276:in `click_link'
+/home/jorge/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/forwardable.rb:182:in `click_link'
+webrat (0.7.3) lib/webrat/core/methods.rb:7:in `click_link'
+spec/requests/layout_links_spec.rb:40:in `block (2 levels) in &lt;top (required)&gt;'
+rspec-core (2.6.4) lib/rspec/core/example.rb:48:in `instance_eval'
+rspec-core (2.6.4) lib/rspec/core/example.rb:48:in `block in run'
+rspec-core (2.6.4) lib/rspec/core/example.rb:107:in `with_around_hooks'
+rspec-core (2.6.4) lib/rspec/core/example.rb:45:in `run'
+rspec-core (2.6.4) lib/rspec/core/example_group.rb:294:in `block in run_examples'
+rspec-core (2.6.4) lib/rspec/core/example_group.rb:290:in `map'
+rspec-core (2.6.4) lib/rspec/core/example_group.rb:290:in `run_examples'
+rspec-core (2.6.4) lib/rspec/core/example_group.rb:262:in `run'
+rspec-core (2.6.4) lib/rspec/core/command_line.rb:24:in `block (2 levels) in run'
+rspec-core (2.6.4) lib/rspec/core/command_line.rb:24:in `map'
+rspec-core (2.6.4) lib/rspec/core/command_line.rb:24:in `block in run'
+rspec-core (2.6.4) lib/rspec/core/reporter.rb:12:in `report'
+rspec-core (2.6.4) lib/rspec/core/command_line.rb:21:in `run'
+rspec-core (2.6.4) lib/rspec/core/runner.rb:80:in `run_in_process'
+rspec-core (2.6.4) lib/rspec/core/runner.rb:69:in `run'
+rspec-core (2.6.4) lib/rspec/core/runner.rb:11:in `block in autorun'</code></pre>
+    </div>
+</div>
+
+
+
+
+<h2 style="margin-top: 30px">Request</h2>
+<p><b>Parameters</b>: <pre>None</pre></p>
+
+<p><a href="#" onclick="document.getElementById('session_dump').style.display='block'; return false;">Show session dump</a></p>
+<div id="session_dump" style="display:none"><pre>_csrf_token: &quot;WYsuMnVetz/tZlLpLVbvzGLbpPNa/3ungBQKLEisU70=&quot;
+session_id: &quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;</pre></div>
+
+<p><a href="#" onclick="document.getElementById('env_dump').style.display='block'; return false;">Show env dump</a></p>
+<div id="env_dump" style="display:none"><pre>CONTENT_LENGTH: &quot;0&quot;
+CONTENT_TYPE: &quot;application/x-www-form-urlencoded&quot;
+HTTPS: &quot;off&quot;
+HTTP_ACCEPT: &quot;text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5&quot;
+HTTP_COOKIE: &quot;_sample_app_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY%3D--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;
+HTTP_HOST: &quot;www.example.com&quot;
+HTTP_REFERER: &quot;/&quot;
+PATH_INFO: &quot;/signup&quot;
+QUERY_STRING: &quot;&quot;
+REMOTE_ADDR: &quot;127.0.0.1&quot;
+REQUEST_METHOD: &quot;GET&quot;
+REQUEST_URI: &quot;/signup&quot;
+SCRIPT_NAME: &quot;&quot;
+SERVER_NAME: &quot;www.example.com&quot;
+SERVER_PORT: &quot;80&quot;
+action_controller.instance: #&lt;UsersController:0xb89e094 @action_has_layout=true, @view_context_class=nil, @_headers={&quot;Content-Type&quot;=&gt;&quot;text/html&quot;}, @_status=200, @_response=#&lt;ActionDispatch::Response:0xb89dfe0 @writer=#&lt;Proc:0xb89df7c@/home/jorge/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.1/lib/action_dispatch/http/response.rb:44 (lambda)&gt;, @block=nil, @length=0, @header={}, @status=200, @body=[], @cookie=[], @sending_file=false, @blank=false, @cache_control={}, @etag=nil, @request=#&lt;ActionDispatch::Request:0xb89dff4 @env={&quot;rack.version&quot;=&gt;[1, 1], &quot;rack.input&quot;=&gt;#&lt;StringIO:0xab1f648&gt;, &quot;rack.errors&quot;=&gt;#&lt;StringIO:0xab1f828&gt;, &quot;rack.multithread&quot;=&gt;false, &quot;rack.multiprocess&quot;=&gt;true, &quot;rack.run_once&quot;=&gt;false, &quot;REQUEST_METHOD&quot;=&gt;&quot;GET&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;www.example.com&quot;, &quot;SERVER_PORT&quot;=&gt;&quot;80&quot;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/signup&quot;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;HTTPS&quot;=&gt;&quot;off&quot;, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;0&quot;, &quot;rack.test&quot;=&gt;true, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;REQUEST_URI&quot;=&gt;&quot;/signup&quot;, &quot;HTTP_HOST&quot;=&gt;&quot;www.example.com&quot;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;HTTP_ACCEPT&quot;=&gt;&quot;text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5&quot;, &quot;HTTP_REFERER&quot;=&gt;&quot;/&quot;, &quot;HTTP_COOKIE&quot;=&gt;&quot;_sample_app_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY%3D--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;action_dispatch.secret_token&quot;=&gt;&quot;774b983da5a586e5f63f44b8da17e19390f907ee2fcd3876413a7cf425929a9d8852c4b5fdcee6f740cda33cca13a27a84785f53f671a087f5358b7b402c1d1b&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;127.0.0.1, &quot;rack.session&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;, &quot;_csrf_token&quot;=&gt;&quot;WYsuMnVetz/tZlLpLVbvzGLbpPNa/3ungBQKLEisU70=&quot;}, &quot;rack.session.options&quot;=&gt;{:path=&gt;&quot;/&quot;, :domain=&gt;nil, :expire_after=&gt;nil, :secure=&gt;false, :httponly=&gt;true, :id=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;}, &quot;rack.request.cookie_string&quot;=&gt;&quot;_sample_app_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY%3D--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;, &quot;rack.request.cookie_hash&quot;=&gt;{&quot;_sample_app_session&quot;=&gt;&quot;BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY=--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;}, &quot;action_dispatch.cookies&quot;=&gt;{&quot;_sample_app_session&quot;=&gt;&quot;BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY=--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;, &quot;_csrf_token&quot;=&gt;&quot;WYsuMnVetz/tZlLpLVbvzGLbpPNa/3ungBQKLEisU70=&quot;}, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:controller=&gt;&quot;users&quot;, :action=&gt;&quot;new&quot;}, &quot;action_controller.instance&quot;=&gt;#&lt;UsersController:0xb89e094 ...&gt;, &quot;action_dispatch.request.content_type&quot;=&gt;application/x-www-form-urlencoded, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0xab1f648&gt;, &quot;rack.request.form_hash&quot;=&gt;{}, &quot;rack.request.form_vars&quot;=&gt;&quot;&quot;, &quot;action_dispatch.request.request_parameters&quot;=&gt;{}, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;new&quot;}, &quot;action_dispatch.request.formats&quot;=&gt;[text/html]}, @fullpath=&quot;/signup&quot;, @filtered_parameters={&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;new&quot;}, @method=&quot;GET&quot;, @request_method=&quot;GET&quot;&gt;&gt;, @_request=#&lt;ActionDispatch::Request:0xb89dff4 @env={&quot;rack.version&quot;=&gt;[1, 1], &quot;rack.input&quot;=&gt;#&lt;StringIO:0xab1f648&gt;, &quot;rack.errors&quot;=&gt;#&lt;StringIO:0xab1f828&gt;, &quot;rack.multithread&quot;=&gt;false, &quot;rack.multiprocess&quot;=&gt;true, &quot;rack.run_once&quot;=&gt;false, &quot;REQUEST_METHOD&quot;=&gt;&quot;GET&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;www.example.com&quot;, &quot;SERVER_PORT&quot;=&gt;&quot;80&quot;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/signup&quot;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;HTTPS&quot;=&gt;&quot;off&quot;, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;0&quot;, &quot;rack.test&quot;=&gt;true, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;REQUEST_URI&quot;=&gt;&quot;/signup&quot;, &quot;HTTP_HOST&quot;=&gt;&quot;www.example.com&quot;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;HTTP_ACCEPT&quot;=&gt;&quot;text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5&quot;, &quot;HTTP_REFERER&quot;=&gt;&quot;/&quot;, &quot;HTTP_COOKIE&quot;=&gt;&quot;_sample_app_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY%3D--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;action_dispatch.secret_token&quot;=&gt;&quot;774b983da5a586e5f63f44b8da17e19390f907ee2fcd3876413a7cf425929a9d8852c4b5fdcee6f740cda33cca13a27a84785f53f671a087f5358b7b402c1d1b&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;127.0.0.1, &quot;rack.session&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;, &quot;_csrf_token&quot;=&gt;&quot;WYsuMnVetz/tZlLpLVbvzGLbpPNa/3ungBQKLEisU70=&quot;}, &quot;rack.session.options&quot;=&gt;{:path=&gt;&quot;/&quot;, :domain=&gt;nil, :expire_after=&gt;nil, :secure=&gt;false, :httponly=&gt;true, :id=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;}, &quot;rack.request.cookie_string&quot;=&gt;&quot;_sample_app_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY%3D--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;, &quot;rack.request.cookie_hash&quot;=&gt;{&quot;_sample_app_session&quot;=&gt;&quot;BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY=--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;}, &quot;action_dispatch.cookies&quot;=&gt;{&quot;_sample_app_session&quot;=&gt;&quot;BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY=--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;, &quot;_csrf_token&quot;=&gt;&quot;WYsuMnVetz/tZlLpLVbvzGLbpPNa/3ungBQKLEisU70=&quot;}, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:controller=&gt;&quot;users&quot;, :action=&gt;&quot;new&quot;}, &quot;action_controller.instance&quot;=&gt;#&lt;UsersController:0xb89e094 ...&gt;, &quot;action_dispatch.request.content_type&quot;=&gt;application/x-www-form-urlencoded, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0xab1f648&gt;, &quot;rack.request.form_hash&quot;=&gt;{}, &quot;rack.request.form_vars&quot;=&gt;&quot;&quot;, &quot;action_dispatch.request.request_parameters&quot;=&gt;{}, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;new&quot;}, &quot;action_dispatch.request.formats&quot;=&gt;[text/html]}, @fullpath=&quot;/signup&quot;, @filtered_parameters={&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;new&quot;}, @method=&quot;GET&quot;, @request_method=&quot;GET&quot;&gt;, @_env={&quot;rack.version&quot;=&gt;[1, 1], &quot;rack.input&quot;=&gt;#&lt;StringIO:0xab1f648&gt;, &quot;rack.errors&quot;=&gt;#&lt;StringIO:0xab1f828&gt;, &quot;rack.multithread&quot;=&gt;false, &quot;rack.multiprocess&quot;=&gt;true, &quot;rack.run_once&quot;=&gt;false, &quot;REQUEST_METHOD&quot;=&gt;&quot;GET&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;www.example.com&quot;, &quot;SERVER_PORT&quot;=&gt;&quot;80&quot;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/signup&quot;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;HTTPS&quot;=&gt;&quot;off&quot;, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;0&quot;, &quot;rack.test&quot;=&gt;true, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;REQUEST_URI&quot;=&gt;&quot;/signup&quot;, &quot;HTTP_HOST&quot;=&gt;&quot;www.example.com&quot;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;HTTP_ACCEPT&quot;=&gt;&quot;text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5&quot;, &quot;HTTP_REFERER&quot;=&gt;&quot;/&quot;, &quot;HTTP_COOKIE&quot;=&gt;&quot;_sample_app_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY%3D--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;action_dispatch.secret_token&quot;=&gt;&quot;774b983da5a586e5f63f44b8da17e19390f907ee2fcd3876413a7cf425929a9d8852c4b5fdcee6f740cda33cca13a27a84785f53f671a087f5358b7b402c1d1b&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;127.0.0.1, &quot;rack.session&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;, &quot;_csrf_token&quot;=&gt;&quot;WYsuMnVetz/tZlLpLVbvzGLbpPNa/3ungBQKLEisU70=&quot;}, &quot;rack.session.options&quot;=&gt;{:path=&gt;&quot;/&quot;, :domain=&gt;nil, :expire_after=&gt;nil, :secure=&gt;false, :httponly=&gt;true, :id=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;}, &quot;rack.request.cookie_string&quot;=&gt;&quot;_sample_app_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY%3D--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;, &quot;rack.request.cookie_hash&quot;=&gt;{&quot;_sample_app_session&quot;=&gt;&quot;BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY=--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;}, &quot;action_dispatch.cookies&quot;=&gt;{&quot;_sample_app_session&quot;=&gt;&quot;BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY=--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;, &quot;_csrf_token&quot;=&gt;&quot;WYsuMnVetz/tZlLpLVbvzGLbpPNa/3ungBQKLEisU70=&quot;}, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:controller=&gt;&quot;users&quot;, :action=&gt;&quot;new&quot;}, &quot;action_controller.instance&quot;=&gt;#&lt;UsersController:0xb89e094 ...&gt;, &quot;action_dispatch.request.content_type&quot;=&gt;application/x-www-form-urlencoded, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0xab1f648&gt;, &quot;rack.request.form_hash&quot;=&gt;{}, &quot;rack.request.form_vars&quot;=&gt;&quot;&quot;, &quot;action_dispatch.request.request_parameters&quot;=&gt;{}, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;new&quot;}, &quot;action_dispatch.request.formats&quot;=&gt;[text/html]}, @lookup_context=#&lt;ActionView::LookupContext:0xb89d874 @details_key=#&lt;ActionView::LookupContext::DetailsKey:0xb7db378 @hash=624309057&gt;, @details={:handlers=&gt;[:erb, :rjs, :builder, :rhtml, :rxml], :formats=&gt;[:html], :locale=&gt;[:en, :en]}, @skip_default_locale=false, @frozen_formats=true, @view_paths=[/home/jorge/rails_projects/sample_app/app/views]&gt;, @_action_name=&quot;new&quot;, @_response_body=nil, @_config={}, @title=&quot;Sign Up&quot;&gt;
+action_dispatch.cookies: {&quot;_sample_app_session&quot;=&gt;&quot;BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY=--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;}
+action_dispatch.parameter_filter: [:password]
+action_dispatch.remote_ip: 127.0.0.1
+action_dispatch.request.content_type: application/x-www-form-urlencoded
+action_dispatch.request.formats: [text/html]
+action_dispatch.request.parameters: {&quot;controller&quot;=&gt;&quot;users&quot;, &quot;action&quot;=&gt;&quot;new&quot;}
+action_dispatch.request.path_parameters: {:controller=&gt;&quot;users&quot;, :action=&gt;&quot;new&quot;}
+action_dispatch.request.query_parameters: {}
+action_dispatch.request.request_parameters: {}
+action_dispatch.request.unsigned_session_cookie: {&quot;session_id&quot;=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;, &quot;_csrf_token&quot;=&gt;&quot;WYsuMnVetz/tZlLpLVbvzGLbpPNa/3ungBQKLEisU70=&quot;}
+action_dispatch.secret_token: &quot;774b983da5a586e5f63f44b8da17e19390f907ee2fcd3876413a7cf425929a9d8852c4b5fdcee6f740cda33cca13a27a84785f53f671a087f5358b7b402c1d1b&quot;
+rack.errors: #&lt;StringIO:0xab1f828&gt;
+rack.input: #&lt;StringIO:0xab1f648&gt;
+rack.multiprocess: true
+rack.multithread: false
+rack.request.cookie_hash: {&quot;_sample_app_session&quot;=&gt;&quot;BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY=--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;}
+rack.request.cookie_string: &quot;_sample_app_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlNGRkYzViNDNkNTJiNzZmNGM0MTRmYWExYzViZjRlZGJJIhBfY3NyZl90b2tlbgY7AEZJIjFXWXN1TW5WZXR6L3RabExwTFZidnpHTGJwUE5hLzN1bmdCUUtMRWlzVTcwPQY7AEY%3D--aa6451e83ca82b840ceffc263ffde5e2fd0fc987&quot;
+rack.request.form_hash: {}
+rack.request.form_input: #&lt;StringIO:0xab1f648&gt;
+rack.request.form_vars: &quot;&quot;
+rack.request.query_hash: {}
+rack.request.query_string: &quot;&quot;
+rack.run_once: false
+rack.session: {&quot;session_id&quot;=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;, &quot;_csrf_token&quot;=&gt;&quot;WYsuMnVetz/tZlLpLVbvzGLbpPNa/3ungBQKLEisU70=&quot;}
+rack.session.options: {:path=&gt;&quot;/&quot;, :domain=&gt;nil, :expire_after=&gt;nil, :secure=&gt;false, :httponly=&gt;true, :id=&gt;&quot;4ddc5b43d52b76f4c414faa1c5bf4edb&quot;}
+rack.test: true
+rack.url_scheme: &quot;http&quot;
+rack.version: [1, 1]</pre></div>
+
+
+<h2 style="margin-top: 30px">Response</h2>
+<p><b>Headers</b>: <pre>None</pre></p>
+
+
+
+</body>
+</html>
